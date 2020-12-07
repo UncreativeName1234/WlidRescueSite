@@ -25,11 +25,11 @@ img {
 
 /* Style rules to show mobile class and hide tab-desk class*/
 
-.mobile {
+.mobile, .mobile-tablet {
     display: block;
 }
 
-.tablet-desktop {
+.tablet-desktop, .desktop {
     display: none;
 }
 
@@ -153,7 +153,7 @@ main ul {
     text-align: center;
 }
 
-#contact {
+#contact, #form h2 {
     text-align: center;
 }
 
@@ -184,6 +184,35 @@ footer {
     padding-bottom: 1%;
     padding-right: 0%;
     padding-top: 0%;
+}
+
+/* Style rules for form element */
+
+fieldset, input, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+#submit {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
 }
 
 footer a {
@@ -217,11 +246,29 @@ footer a {
         padding: 0.5em;
     }
 
+    #form {
+        width: 70%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 /* Media query for desktop viewport */
 
 @media only screen and (min-width: 1000px) {
+
+    /*Desktop Viewport: show desktop class, hide mobile-tablet class */
+
+    .mobile-tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
 
     /* Desktop Viewport: style rules for nav area */
 
@@ -245,6 +292,54 @@ footer a {
 
     #info ul {
         margin-left: 5%;
+    }
+
+    /* Style rules for table */
+
+    table {
+        border: 1px solid #2a1f14;
+        border-collapse: collapse;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+
+    th, td {
+        border: 1px solid #2a1f14;
+        padding: 1%;
+    }
+
+    th {
+        background-color: #2a1f14;
+        color: white;
+        font-size: 1.15em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #deccba;
+    }
+
+    /* Desktop Viewport: Style rules for form */
+
+    form {
+        width: auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
     }
 
 }
