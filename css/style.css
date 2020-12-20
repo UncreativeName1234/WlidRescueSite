@@ -29,7 +29,7 @@ img, video {
     display: block;
 }
 
-.tablet-desktop, .desktop {
+.tablet-desktop, .desktop, #nav-links, .tab-desk {
     display: none;
 }
 
@@ -39,6 +39,7 @@ h1 {
     padding: 2%;
     text-align: center;
     font-family: 'Emblema One', cursive;
+    margin: 2% 0 0 3%;
 }
 
 h3 {
@@ -116,28 +117,28 @@ nav {
     background-color: #2a1f14;
 }
 
-nav ul {
-    list-style-type: none;
+.mobile-nav a {
+    color: #fff;
     text-align: center;
-}
-
-nav li {
-    display: block;
-    font-size: 1.5em;
-    font-family: Geneva, Arial, sans-serif;
-    font-weight: bold;
-    border-top: 0.5px;
-    border-color: #f6eee4;
-}
-
-nav li a {
-    display: block;
-    color: #f6eee4;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
+    font-size: 2em;
     text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.nav-icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #f6eee4;
+    padding: 2%;
+}
+
+.nav-icon div {
+    height: 40px;
+    width: 40px;
+    color: #2a1f14;
 }
 
 /* Style rules for main content */
@@ -190,6 +191,21 @@ main ul {
     color: #f6eee4;
     text-decoration: none;
     font-weight: bold;
+}
+
+#questions p {
+    cursor: pointer;
+}
+
+#answer {
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#answer h2 {
+    display: none;
 }
 
 /* Style rules for footer */
@@ -249,19 +265,30 @@ footer a {
         display: block;
     }
 
-    .mobile {
+    .mobile, .mobile-nav {
         display: none;
     }
 
     /* Tablet Viewport: style rules for nav area */
 
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+    }
+
     nav li {
+        font-family: Geneva, Arial, sans-serif;
+        font-weight: bold;
+        border-color: #f6eee4;
         border-top: none;
         display: inline-block;
         font-size: 1.25em;
     }
 
     nav li a {
+        display: block;
+        color: #f6eee4;
+        text-decoration: none;
         padding: 0.5em;
     }
 
